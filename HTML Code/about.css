@@ -1,0 +1,125 @@
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: white; /* Default text color */
+  }
+  body {
+    background-color: #101010; /* Body background color */
+  }
+  header {
+    background-color: #1463F3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    flex-wrap: wrap;
+  }
+  .logo img {
+    height: 35px; /* Or the size you desire */
+    width: auto; /* Maintain aspect ratio */
+  }
+  .search-bar {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    margin: 0 20px;
+  }
+  .search-bar input {
+    padding: 10px;
+    flex-grow: 1;
+    margin-right: 10px;
+    border: none;
+    border-radius: 5px;
+  }
+  .search-bar input:focus {
+    outline: none;
+  }
+  
+  .menu-items button {
+    background: none;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    cursor: pointer;
+  }
+  .menu-items button:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+
+  .about-content {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 40px;
+    gap: 20px;
+  }
+  
+  .who-we-are {
+    flex: 1;
+    max-width: 50%;
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    align-items: flex-start; /* Align items to the start (left) by default */
+  }
+  
+  .who-we-are h2 {
+    margin-bottom: 0.5em;
+    color: #1463F3;
+    font-size: 1.5em;
+  }
+  
+  .who-we-are h1 {
+    margin-bottom: 0.5em;
+    font-size: 2.5em;
+  }
+  
+  .who-we-are p {
+    margin-bottom: 1em;
+  }
+  
+  .contact-button {
+    background-color: #1463F3;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    align-self: center; /* Align this item (the button) to the center */
+    margin-top: 20px; /* Space from the last paragraph */
+  }  
+  
+  .contact-button:hover {
+    background-color: #0a47a9;
+  }
+  
+  .about-image {
+    flex: 1;
+    max-width: 50%;
+    text-align: center; /* Center the image if there's extra space */
+  }
+  
+  .about-image img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  @media (max-width: 768px) {
+    .who-we-are, .about-image {
+      max-width: 100%;
+      flex-basis: 100%;
+      text-align: center;
+    }
+  
+    .who-we-are {
+      order: 2; /* Display text below the image on smaller screens */
+    }
+  
+    .about-image {
+      order: 1; /* Display image above the text on smaller screens */
+    }
+  }
+  
+  /* Additional media queries for responsiveness as needed */
+  

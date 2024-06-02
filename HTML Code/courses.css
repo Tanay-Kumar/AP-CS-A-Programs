@@ -1,0 +1,136 @@
+body,
+h1,
+h2,
+p {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  color: white; /* Default text color */
+}
+
+body {
+  background-color: #101010; /* Body background color */
+}
+
+header {
+  background-color: #1463f3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+.logo img {
+  height: 35px; /* Adjust to match the size of your actual logo */
+  width: auto; /* Maintain aspect ratio */
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  margin: 0 20px;
+}
+
+.search-bar input {
+  padding: 10px;
+  flex-grow: 1;
+  margin-right: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+.search-bar input:focus {
+  outline: none;
+}
+
+.menu-items button {
+  background: none;
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.menu-items button:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Main container for courses */
+.courses-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto; /* Center container */
+}
+
+/* Heading */
+.courses-container h1 {
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.courses-container {
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto; /* Center the container on the page */
+}
+
+/* Heading */
+.courses-container h1 {
+  margin-bottom: 2em; /* Gives space below the heading */
+}
+
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(180px, 1fr)
+  ); /* Fit as many as possible based on the item minimum width */
+  gap: calc(1vw + 10px); /* Gap size based on the width of the viewport */
+  justify-content: center; /* This will center the grid items within the course-grid container */
+  padding: 0; /* Reset any padding that might be affecting the grid's position */
+}
+
+/* Course items */
+.course-item {
+  background-color: #e85d75; /* Background color for the items */
+  border-radius: 10px;
+  padding: 20px;
+  width: 180px; /* Fixed width for all items */
+  height: 100px; /* Fixed height for all items */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 1rem;
+  text-align: center;
+  text-decoration: none; /* Remove underline from links */
+}
+
+/* Optional: Add a hover effect */
+.course-item:hover {
+  background-color: #9d4150; /* Darken color on hover */
+  transform: scale(1.05); /* Grow the item a bit */
+}
+
+@media (max-width: 768px) {
+  .course-grid {
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(140px, 1fr)
+    ); /* Two columns for smaller screens */
+    gap: 20px; /* Adjust gap for smaller screens if needed */
+  }
+
+  .menu-items,
+  .search-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search-bar input {
+    order: -1; /* Search bar goes on top */
+    margin-bottom: 10px;
+  }
+}
